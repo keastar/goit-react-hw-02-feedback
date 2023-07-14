@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Statistics from './Statistics/Statistics ';
+import Statistics from './Statistics/Statistics';
 
 class Container extends Component {
   render() {
@@ -14,7 +14,7 @@ class Container extends Component {
           color: '#010101',
         }}
       >
-        <Statistics />
+        {/* <Statistics /> */}
       </div>
     );
   }
