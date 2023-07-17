@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Section = ({ text, children }) => {
   return (
     <>
-      <h5>{text}</h5>
+      <h5 className={css.h5}>{text}</h5>
       {children}
     </>
   );
