@@ -13,6 +13,7 @@ const Section = ({ text, children }) => {
 
 Section.propTypes = {
   text: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default Section;

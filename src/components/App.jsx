@@ -3,6 +3,8 @@ import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
+import Container from './Container';
+import PropTypes from 'prop-types';
 
 
 class App extends Component {
@@ -36,23 +38,12 @@ class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
-    console.log(total);
     const positivePercentage = this.countPositiveFeedbackPercentage();
-
     const objKey = Object.keys(this.state);
 
     return (
-      <div
-        style={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100vh',
-        alignItems: 'left',
-        fontSize: 40,
-        color: '#010101',
-        margin: '0 0 0 50px'
-      }}
-      >
+    
+      <Container>
         < Section text="Please leave Feedback">
           <FeedbackOptions options={objKey} onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
@@ -69,9 +60,19 @@ class App extends Component {
                   />
               </Section>)
           }  
-      </div>
+      </Container>
+    
     );
   }
+};
+
+App.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  countTotalFeedback: PropTypes.func.isRequired,
+  countPositiveFeedbackPercentage: PropTypes.func.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default App;
