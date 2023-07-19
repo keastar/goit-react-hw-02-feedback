@@ -22,14 +22,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-  options: PropTypes.arrayOf(
-    PropTypes.exact({
-      key: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      onClick: PropTypes.func.isRequired,
-    })
-  ),
+  options: PropTypes.string.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 export default FeedbackOptions;
