@@ -4,7 +4,6 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 import Container from './Container';
-import PropTypes from 'prop-types';
 
 
 class App extends Component {
